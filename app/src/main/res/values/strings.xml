@@ -1,0 +1,20 @@
+<resources>
+    <string name="challengue">Challengue</string>
+    <string name="app_name">EDC_Challengue</string>
+    <string name="login">LOGIN</string>
+    <string name="name">Name</string>
+    <string name="lastname">Lastname</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="confirmPassword">Confirm password</string>
+    <string name="newUser">New user? Register Now</string>
+    <string name="createAccount">Create a User</string>
+    <string name="notification">Do you want receive notifications?</string>
+
+
+
+    <string name="birthdate">Birthdate</string>
+    <string name="date">Birthdate</string>
+    <string name="chooseDate">Choose Date</string>
+    <string name="selectDate">Select Date</string>
+</resources>
