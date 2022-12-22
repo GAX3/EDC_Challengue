@@ -19,15 +19,30 @@ class HomeActivity : AppCompatActivity() {
         var name = intent.getStringExtra("name")
         var password = intent.getStringExtra("password")
 
-        mBinding.tvWelcome.text = "${name.toString()} + ${password.toString()}"
+
 
         Thread{
             val userEntity = userDao?.getData(name, password)
             if(userEntity != null){
                 val name = userEntity.name
+                val lastname = userEntity.lastname
                 val birthdate = userEntity.birthdate
+                val email = userEntity.email
+                val gender = userEntity.gender
+                val notification = userEntity.notifications
 
-                mBinding.tvTest.text = "$name + $birthdate"
+                mBinding.name1.text = name
+                mBinding.lastname1.text = lastname
+                mBinding.birthdate1.text = birthdate
+                mBinding.email1.text = email
+                mBinding.gender1.text = gender
+
+                if(notification == true){|
+                    mBinding.noti1.text = "Activated"
+                }else{
+                    mBinding.noti1.text = "Inactivaded"
+                }
+
 
             }
 

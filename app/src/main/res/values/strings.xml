@@ -16,4 +16,7 @@
     <string name="date">Birthdate</string>
     <string name="chooseDate">Choose Date</string>
     <string name="selectDate">Select Date</string>
+    <string name="gender">Gender</string>
+    <string name="notifications">Notifications</string>
+
 </resources>

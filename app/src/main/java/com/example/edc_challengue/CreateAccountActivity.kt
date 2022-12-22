@@ -52,6 +52,11 @@ class CreateAccountActivity : AppCompatActivity(), AdapterView.OnItemClickListen
             onItemClickListener = this@CreateAccountActivity
         }
 
+        mBinding.tvDate.setOnClickListener {
+            var gender = mBinding.autoCompleteTextView.text
+            Toast.makeText(baseContext, gender, Toast.LENGTH_SHORT).show()
+        }
+
         mBinding.btnSave.setOnClickListener {
             with(mBinding){
                 var name = tieLastname.text.isNullOrEmpty()
@@ -74,7 +79,8 @@ class CreateAccountActivity : AppCompatActivity(), AdapterView.OnItemClickListen
                     userEntity.lastname = mBinding.tieLastname.text.toString()
                     userEntity.birthdate = birthdate
                     userEntity.email = mBinding.tieEmail.text.toString()
-                    userEntity.gender = mBinding.autoCompleteTextView.toString()
+                    userEntity.gender = mBinding.autoCompleteTextView.text.toString()
+
 
                     userEntity.password = pass1.toString()
                     userEntity.notifications = notifications
