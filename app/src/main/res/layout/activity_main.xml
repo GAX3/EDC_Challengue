@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/bluesky"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
 
     <ImageView
         android:id="@+id/image"
@@ -20,12 +21,12 @@
     <androidx.cardview.widget.CardView
         app:cardCornerRadius="8dp"
         android:elevation="8dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:layout_marginHorizontal="30dp"
-        app:layout_constraintTop_toBottomOf="@+id/image"
-        android:background="@color/cardview_light_background">
+        app:layout_constraintTop_toBottomOf="@+id/image">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:paddingHorizontal="40dp"
@@ -39,6 +40,7 @@
                 android:textSize="30dp"
                 android:layout_marginTop="10dp"
                 android:textAlignment="center"
+                android:textColor="@color/bluesky"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -48,25 +50,33 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="10dp"
                 android:id="@+id/tilUser"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:startIconDrawable="@drawable/ic_person"
                 app:layout_constraintTop_toBottomOf="@+id/tvLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tieName"
                     android:hint="@string/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:textColorHighlight="@color/bluesky"
                 android:layout_marginTop="10dp"
                 android:id="@+id/tilPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:startIconDrawable="@drawable/ic_pass"
                 app:layout_constraintTop_toBottomOf="@+id/tilUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tiePassword"
                     android:hint="@string/password"
+                    android:inputType="textPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -97,8 +107,6 @@
                 android:layout_height="wrap_content"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
     </androidx.cardview.widget.CardView>
 
